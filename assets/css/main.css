@@ -1,0 +1,5 @@
+#jumbotron {
+    background-image: url("lego.jpg");
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc;
+}
