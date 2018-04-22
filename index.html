@@ -130,17 +130,17 @@
           var email = $('<div>')
           email.addClass("emailClass");
           email.html(info.email);
-          $(stuff).append(email);
+          $(stuff).prepend(email);
       
           var toyImage = $('<img>'); //created image tag
         toyImage.addClass("toyImageClass");
         toyImage.attr("src", info.url);
-        $(stuff).append(toyImage);
+        $(stuff).prepend(toyImage);
       
           
       
       
-          $('#toysandmail').append(stuff);
+          $('#toysandmail').prepend(stuff);
       })
       
       
