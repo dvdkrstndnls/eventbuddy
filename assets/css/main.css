@@ -1,5 +1,5 @@
 .jumbotron-fluid {
-    background-image: url("../assets/images/lego.jpeg");
+    background-image: url("./assets/images/lego.jpeg");
     /* background-repeat: no-repeat, repeat; */
     /* background-color: #cccccc; */
     background-size: cover;
