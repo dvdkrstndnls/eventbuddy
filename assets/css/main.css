@@ -1,5 +1,12 @@
-#jumbotron {
-    background-image: url("lego.jpg");
-    background-repeat: no-repeat, repeat;
-    background-color: #cccccc;
+.jumbotron-fluid {
+    background-image: url("../assets/images/lego.jpeg");
+    /* background-repeat: no-repeat, repeat; */
+    /* background-color: #cccccc; */
+    background-size: cover;
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+
+}
+
+.navbar {
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 }
