@@ -15,6 +15,17 @@
     margin: 5%;
 }
 
-body {
+/* body {
     margin: 5%;
+} */
+
+.container {
+    padding: 3px, 3px, 3px, 3px;
+    margin: 5%;
+    border: 5px solid gray;
+
+}
+
+.footer-copyright {
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); 
 }
