@@ -47,6 +47,99 @@
               </nav>
 
 
+              <form>
+                  <div class='form-group'>
+                      <label for='name'>Email</label>
+                      <input type="text" id='email'>
+                  </div>
+                  <div class='form-group'>
+                      <label for='name'>Toy Image URL</label>
+                      <input type="text" id='url'>
+                  </div>
+                  <button type='submit' class='btn btn-primary' id='pushNew'>Post!</button>
+      </form>
+      <br>
+      <br>
+      <div id="toysandmail">
+      </div>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+      
+      <style>
+      .toyImageClass {
+      
+        width:200px;
+      }
+      </style>
+      
+      <script>
+      
+      var config = {
+          apiKey: "AIzaSyDP5v7bPm31JzLTbQfpKMznC1AoPGcNMrI",
+          authDomain: "hackathonstuffles.firebaseapp.com",
+          databaseURL: "https://hackathonstuffles.firebaseio.com",
+          projectId: "hackathonstuffles",
+          storageBucket: "hackathonstuffles.appspot.com",
+          messagingSenderId: "41314634182"
+        };
+        firebase.initializeApp(config);
+      
+       var database = firebase.database();
+      
+      
+      var info = {};
+      
+      
+      $(document).on('click','#pushNew',function() {
+          event.preventDefault();
+      
+          var email = $("#email").val();
+        var url = $("#url").val();
+      
+      info = {
+        
+        email: email,
+        url: url
+        
+      }
+      
+      
+          database.ref().push(info);
+      
+          $("#email").val("");
+          $("#url").val("");
+      
+      });
+      
+      database.ref().on('child_added', function(snapshot) {  
+          info = snapshot.val();
+      
+          var stuff = $('<div>');
+          stuff.addClass("stuff-div");
+      
+          var email = $('<div>')
+          email.addClass("emailClass");
+          email.html(info.email);
+          $(stuff).append(email);
+      
+          var toyImage = $('<img>'); //created image tag
+        toyImage.addClass("toyImageClass");
+        toyImage.attr("src", info.url);
+        $(stuff).append(toyImage);
+      
+          
+      
+      
+          $('#toysandmail').append(stuff);
+      })
+      
+      
+      
+      
+      
+        </script>
+
                       
         <div class="row">
             
@@ -54,14 +147,15 @@
             <div class="col-sm-6">
             <h2>Post a Toy</h2>
                 <div class="imageUpload">
-                    <label for="example-url-input" class="col-2 col-form-label">.</label>
+                    <label for="example-url-input" class="col-2 col-form-label">///</label>
                         <div class="col-10">
+                            <img id="dummyHead" src="http://www.orangeandgrey.org.uk/sitecontent/uploads/2015/01/Image-Here6.png" alt="dummyHead"
+                            width="90%" height="90%">  
                             <input class="form-control" type="url" value="https://yourpicturefilehere.jpg" id="userImage">
                             <br>
                             <input class="btn btn-primary" type="submit" value="Submit" id="submit">
                             <br>
-                            <img id="dummyHead" src="http://www.orangeandgrey.org.uk/sitecontent/uploads/2015/01/Image-Here6.png" alt="dummyHead"
-                                width="90%" height="90%">
+                            
                         </div>
                 </div>
             </div>
