@@ -21,8 +21,8 @@
 } */
 
 .container {
-    padding: 3px, 3px, 3px, 3px;
-    margin: 5%;
+    padding: 10px, 10px, 10px, 10px;
+    margin: 3%;
     border: 5px solid gray;
 
 }
@@ -32,9 +32,18 @@
 }
 
 body, html {
-    height: 70%;
-    margin: 0;
+    /* height: 70%;
+    margin: 0; */
+    width: 100%;
+    min-height: 100%;
 }
+
+
+.toyImageClass {
+
+  width:200px;
+}
+
 
 .bg {
     /* The image used */
