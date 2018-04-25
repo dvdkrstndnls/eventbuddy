@@ -1,14 +1,15 @@
-.jumbotron-fluid {
-    background-image: url("./assets/images/lego.jpeg");
-    /* background-repeat: no-repeat, repeat; */
-    /* background-color: #cccccc; */
+/* .jumbotron-fluid {
+    background-image: url("lego.jpeg");
     background-size: cover;
     background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 
-}
+} */
+
+
+
 
 .navbar {
-    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    background: linear-gradient(to left, rgba(255,0,0,0), rgb(216, 206, 117));
 }
 
 #col-sm-6 {
@@ -28,4 +29,31 @@
 
 .footer-copyright {
     background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); 
+}
+
+body, html {
+    height: 70%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Ego-leonard-brighton.jpg/1280px-Ego-leonard-brighton.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner {
+    background-color: rgb(223, 57, 6);
+    opacity: 0.8;
+}
+
+div{
+    margin-bottom: 30 px;
 }
