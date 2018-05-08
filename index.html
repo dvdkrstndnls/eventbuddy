@@ -141,10 +141,17 @@
           var stuff = $('<div>');
           stuff.addClass("stuff-div");
       
-          var email = $('<div>')
+          // var email = $('<div>')
+          // email.addClass("emailClass");
+          // email.html(info.email);
+          // $(stuff).prepend(email);
+
+          var email = $('<a>')
+          email.attr('href', "mailto:" + info.email);
           email.addClass("emailClass");
           email.html(info.email);
-          $(stuff).prepend(email);
+          console.log(email)
+          stuff.append(email);
       
           var toyImage = $('<img>'); //created image tag
         toyImage.addClass("toyImageClass");
