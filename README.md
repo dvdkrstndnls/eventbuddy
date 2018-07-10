@@ -1,6 +1,9 @@
 # PlastX
 A Platform for Reusing/Sharing plastic toys so as to keep plastic out of our Oceans 
 
+<img src="assets/images/readmescreenshot.png" alt="PlastX homepage Screenshot">
+
+
 ## Demo Day Slide Deck:
 https://docs.google.com/presentation/d/1WCEA4127wJaEcv2XlEYQ_lSZZaYR9-PZmo-n4RNiVpA/edit#slide=id.gd9c453428_0_16
 
